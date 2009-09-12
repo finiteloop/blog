@@ -1,0 +1,7 @@
+Bret Taylor's blog
+==================
+My blog	is written with	Tornado	(http://www.tornadoweb.org/) and runs on
+AppEngine (http://appengine.google.com/).
+
+It is pretty special-purpose, but should be easy to modify for someone
+with knowledge of Python/Tornado.
