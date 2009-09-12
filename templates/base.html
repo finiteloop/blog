@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>{% block title %}{{ escape(handler.settings["blog_title"]) }}{% end %}</title>
+    <link rel="stylesheet" href="/static/blog.css" type="text/css"/>
+    <link rel="alternate" href="http://feeds.feedburner.com/brettaylor" type="application/atom+xml" title="{{ escape(handler.settings["blog_title"]) }}"/>
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <div id="body">
+      <div id="header">
+	<div class="menu"><span><a href="http://feeds.feedburner.com/brettaylor"><img src="/static/images/rss.png" style="width:30px" alt="Feed"/></a></span><span><a href="/archive"><img src="/static/images/archive.png" style="width:57px" alt="Archive"/></a></span><span><a href="/about"><img src="/static/images/about-me.png" style="width:69px" alt="About me"/></a></span></div>
+	<div class="title"><a href="/"><img src="/static/images/bret-taylor.png" style="width:116px" alt="Bret Taylor"/></a></div>
+      </div>
+      <div id="content">{% block body %}{% end %}</div>
+      <div id="footer">
+	&copy;{{ datetime.datetime.utcnow().year }} Bret Taylor - <a href="/about">About me</a> - <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons license</a>
+	{% if current_user %} - <a href="{{ users.create_logout_url(request.uri) }}">Sign out</a>{% end %}
+      </div>
+    </div>
+    {% block bottom %}{% end %}
+    {% if not handler.settings.get("debug") %}
+      <script type="text/javascript">
+	document.write(unescape("%3Cscript src='" + ((document.location.protocol == "https:") ? "https://ssl." : "http://www.") + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      //<![CDATA[
+
+	try {
+	  var pageTracker = _gat._getTracker("UA-50599-9");
+	  pageTracker._trackPageview();
+	} catch(e) {}
+
+      //]]>
+      </script>
+    {% end %}
+  </body>
+</html>

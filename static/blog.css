@@ -1,0 +1,184 @@
+/*
+ * Copyright 2009 Bret Taylor
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License. You may obtain
+ * a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+
+body {
+  background: white;
+  color: black;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+body,
+textarea {
+  font-family: Georgia, serif;
+  font-size: 12pt;
+}
+
+h1,
+h2,
+h3,
+h4,
+input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+td {
+  border: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+pre,
+code {
+  font-family: monospace;
+  color: #050;
+}
+
+pre {
+  margin: 17pt;
+  margin-right: 0;
+  padding-left: 15pt;
+  border-left: 1px solid #ddd;
+  line-height: 16pt;
+  overflow: auto;
+}
+
+a,
+a code {
+  color: #00c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  background: black;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 0;
+}
+
+#header .menu {
+  float: right;
+}
+
+#header .menu span {
+  margin-left: 18px;
+}
+
+#footer,
+#content {
+  margin: 25px;
+  margin-left: 35px;
+  margin-right: 35px;
+  max-width: 1024px;
+}
+
+#sidebar {
+  float: right;
+  line-height: 0;
+}
+
+#sidebar .section {
+  padding-bottom: 30px;
+}
+
+#sidebar .headline {
+  padding-top: 15px;
+}
+
+#sidebar .icons td {
+  padding-top: 9px;
+  padding-right: 9px;
+  line-height: 0;
+}
+
+#sidebar .icons td.last {
+  padding-right: 0;
+}
+
+#entries {
+  margin-right: 250px;
+}
+
+#content h1 {
+  font-size: 20pt;
+}
+
+.entry h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.entry h2 {
+  font-size: 15pt;
+  margin-bottom: 3pt;
+}
+
+.entry {
+  margin-bottom: 2em;
+}
+
+.entry .date {
+  margin-top: 3px;
+}
+
+.entry .body {
+  margin-top: 1em;
+}
+
+.entry .footer {
+  margin-top: 1em;
+}
+
+#content p,
+#content li {
+  line-height: 17pt;
+}
+
+#content p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.entry #disqus_thread {
+  margin-top: 4em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.entry #disqus_thread p,
+.entry #disqus_thread li {
+  line-height: normal;
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+  {% block sidebar %}
+    <div id="sidebar">
+      <div class="section">
+	<div class="headline"><img src="/static/images/find-me-on-the-web.png" style="width:139px" alt="Find me on the web"/></div>
+	<table class="icons">
+	  <tr>
+	    <td><a href="http://www.facebook.com/btaylor" rel="me"><img src="/static/images/facebook-big.png"/></a></td>
+	    <td class="last"><a href="mailto:btaylor@gmail.com" rel="me"><img src="/static/images/gmail-big.png"/></a></td>
+	  </tr>
+	  <tr>
+	    <td><a href="http://feeds.feedburner.com/brettaylor" rel="me"><img src="/static/images/feed-big.png"/></a></td>
+	    <td class="last"><a href="http://friendfeed.com/bret" rel="me"><img src="/static/images/friendfeed-big.png"/></a></td>
+	  </tr>
+	</table>
+      </div>
+    </div>
+  {% end %}
+  <div id="entries">{% block content %}{% end %}</div>
+{% end %}

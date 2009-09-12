@@ -1,0 +1,7 @@
+{% extends "sidebar.html" %}
+
+{% block title %}{{ escape(entry.title) }} - {{ escape(handler.settings["blog_title"]) }}{% end %}
+
+{% block content %}
+  {{ modules.Entry(entry, show_comments=True) }}
+{% end %}
