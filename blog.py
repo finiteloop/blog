@@ -85,6 +85,7 @@ class HomeHandler(BaseHandler):
 
 
 class EntryHandler(BaseHandler):
+    @tornado.web.removeslash
     def get(self, slug):
         entry = db.Query(Entry).filter("slug =", slug).get()
         if not entry: raise tornado.web.HTTPError(404)
@@ -178,7 +179,7 @@ application = tornado.wsgi.WSGIApplication([
     (r"/", HomeHandler),
     (r"/archive", ArchiveHandler),
     (r"/feed", FeedHandler),
-    (r"/entry/([^/]+)", EntryHandler),
+    (r"/entry/([^/]+)/?", EntryHandler),
     (r"/compose", ComposeHandler),
     (r"/about", AboutHandler),
     (r"/index", tornado.web.RedirectHandler, {"url": "/archive"}),
